@@ -306,8 +306,8 @@ img {
   content: "";
   position: absolute;
   inset: auto 18px 18px auto;
-  width: 74px;
-  height: 74px;
+  width: 80px;
+  height: 96px;
   border-right: 2px solid var(--teal);
   border-bottom: 2px solid var(--teal);
   opacity: 0.72;
