@@ -396,6 +396,77 @@ img {
   text-shadow: 0 0 18px rgba(57, 255, 20, 0.35);
 }
 
+.about-stat-cards{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+@property --ai-border-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes heroAiBorderSnake {
+  to {
+    --ai-border-angle: 360deg;
+  }
+}
+
+.about-stat-card {
+  --ai-border-angle: 0deg;
+  position: relative;
+  height: 100%;
+  min-height: 240px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--ink);
+  background:
+          linear-gradient(rgba(17, 24, 39, 0.96), rgba(13, 19, 34, 0.96)) padding-box,
+          conic-gradient(
+                  from var(--ai-border-angle),
+                  rgba(66, 133, 244, 0) 0deg,
+                  rgba(66, 133, 244, 0) 250deg,
+                  #4285f4 278deg,
+                  #1dbf4b 294deg,
+                  #facf54 310deg,
+                  #dc0823 326deg,
+                  #4285f4 342deg,
+                  rgba(66, 133, 244, 0) 360deg
+          ) border-box;
+
+  border: 4px solid transparent;
+  border-radius: 8px;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.24);
+  overflow: hidden;
+  animation: heroAiBorderSnake 2.8s linear infinite;
+}
+
+.about-stat-card i {
+  color: var(--teal);
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.about-stat-card strong {
+  color: var(--ink);
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.about-stat-card span {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
 .timeline {
   position: relative;
 }
