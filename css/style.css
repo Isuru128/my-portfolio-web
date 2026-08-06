@@ -848,7 +848,8 @@ textarea.form-control {
   }
 
   .about-photo {
-    max-width: 280px;
+    max-width: 420px;
+    width: 100%;
   }
 
   .contact-link span {
@@ -868,6 +869,11 @@ textarea.form-control {
 
   .page-hero {
     padding: 104px 0 56px;
+  }
+
+  .about-photo {
+    max-width: 380px;
+    width: 100%;
   }
 
   .hero h1,
@@ -969,7 +975,8 @@ textarea.form-control {
   }
 
   .about-photo {
-    max-width: 230px;
+    max-width: 340px;
+    width: 100%;
   }
 
   .profile-panel {
