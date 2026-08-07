@@ -672,14 +672,70 @@ img {
 
 .carousel-control-prev,
 .carousel-control-next {
-  width: 12%;
+  width: 46px;
+  height: 46px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 1;
+  z-index: 10;
+}
+
+.carousel-control-prev {
+  left: 12px;
+}
+
+.carousel-control-next {
+  right: 12px;
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-color: rgba(0,0,0,.55);
+  width: 42px;
+  height: 42px;
+  padding: 0;
+
+  background-color: var(--teal);
+  background-size: 45% 45%;
+  background-position: center;
+  background-repeat: no-repeat;
+
   border-radius: 50%;
-  padding: 15px;
+  opacity: 1;
+
+  /* Makes Bootstrap's white arrow black */
+  filter: brightness(0);
+}
+
+/* Restore the green circle after applying the filter */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: none;
+  position: relative;
+}
+
+.carousel-control-prev-icon::after,
+.carousel-control-next-icon::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #000;
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1;
+  transform: translate(-50%, -53%);
+}
+
+.carousel-control-prev-icon::after {
+  content: "‹";
+}
+
+.carousel-control-next-icon::after {
+  content: "›";
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+  background-color: #5eead4;
 }
 
 .project-media span {
